@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Logistics Order Status Prediction App">
+    <meta name="author" content="Devcrud">
+    <title>Logistics Order Status Prediction</title>
+    
+    <!-- Font icons -->
+    <link rel="stylesheet" href="../static/assets/css/themify-icons.css"> 
+    <!-- Bootstrap + Dorang main styles -->
+    <link rel="stylesheet" href="../static/assets/css/styles.css"> 
+
+    <!-- Custom CSS Styles -->
+    <style>
+        body {
+            background-image: url('/static/logistics2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: #040404;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color:transparent;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: black;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffffff;
+            background-color:rgb(90, 88, 88);
+        }
+
+        /* Section Styles */
+        section {
+            height: 100vh; /* Full window height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #070707;
+            
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #070707;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            font-size: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="{{ url_for('form') }}">Get Started</a> <!-- Use Flask's url_for function -->
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="section-content">
+            <h1 class="section-title">Logistics Order Status Prediction App</h1>
+            <p>Leverage our advanced machine learning model to predict the status of your logistics orders with accuracy and precision. Our platform offers insights into order status, shipment tracking, and delivery predictions, empowering you to make informed decisions.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" style="background-color: transparent;">
+        <div class="section-content">
+            <h2 class="section-title">About Us</h2>
+            <p>We specialize in developing predictive models for logistics and supply chain management. Our solutions are designed to optimize operations and enhance decision-making processes by providing actionable insights and forecasts based on historical data and advanced algorithms.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color:transparent;">
+        <div class="section-content">
+            <h2 class="section-title">Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us. We are here to help you with any inquiries related to our logistics order prediction services.</p>
+            <p>Email: info@logisticspredict.com</p>
+            <p>Phone: +1 800 123 4567</p>
+        </div>
+    </section>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            if (anchor.getAttribute('href').startsWith("#")) {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
